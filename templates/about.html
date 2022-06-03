@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}About {% endblock title %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<style>
+.title{
+    font-family: 'Lucida Calligraphy';
+    font-size: 50px;
+    color: black;
+    text-align: center;
+
+}
+.about{
+    font-family: Consolas;
+    font-size: 25px;
+}
+blockquote{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+@media screen and (max-width: 800px) {
+    .title{font-size: 25px;}
+    .about{font-size: 18px;}
+    blockquote{width: 100%;}
+  }
+</style>
+
+{% endblock head %}
+
+{% block body %}
+<div class='container' style='background-image: linear-gradient(#8443E9, #B5B6B1) '>
+<div class='title'>About Us</div><br>
+<div class='container about'>
+    &nbsp;&nbsp;Hello Everyone. You are welcome to the fast growing Hostel Searching Web-app. A place where you can find the 
+    best hostel that suits your budget, your location and your environment. This is a place where you can find plenty 
+    of hostel both for Boys and Girls. This site offers comprehensive free listings for all hostels worldwide including:<br>
+    <ul style="list-style-type:disc;">
+        <li>Quick and easy searching</li>
+        <li>Direct contact information</li>
+        <li>Online Booking System</li>
+        <li>Original hostel photographs</li>
+        <li>Fully Verified Owner and Place</li>
+        <li>Save money, time and sanity</li>
+        
+    </ul>
+    
+    &nbsp;Now no more running here and there for hostels. Just open the app book the beds and check-in in the hostels.<br><br>
+    <blockquote>No need to worry <br>
+    Because You are in Domitory</blockquote>
+</div>
+<div class='container about'>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;We are a group of four memebers working on a project to serve you the best experience for searching your hostel and 
+    we will continue to full-fill your requirements.  Stay connected with us :)
+
+
+</div>
+<br>
+
+
+
+
+</div>
+
+
+{% endblock body %}

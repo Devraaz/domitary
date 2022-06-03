@@ -1,0 +1,53 @@
+{% extends 'details/base1.html' %}
+{% block title %} Hostel Activity {% endblock title %}
+
+{% block head %}
+<style>
+.btn{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px; 
+    border-radius: 20px;
+
+}
+
+
+</style>
+
+
+{% endblock head %}
+
+
+{% block body %}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row" id="main" >
+            <div class="col-sm-12 col-md-12 well" id="content">
+
+                {% if user.is_authenticated %}
+                <h1>Welcome {{ user.first_name }}      </h1>             
+                {% endif %}
+                
+                
+                </div>
+              </div>
+
+              {% for message  in messages  %}
+                    <b  class="well" style='text-align: center; margin: 10px; text-align: center;float: right;'>{{ message }}</b>
+            {% endfor %}
+                <br>
+              <!-- /.row -->
+
+
+                <a href="hstl_details" class='btn btn-dark'> Submit Hostel Details</a><br>
+                <a href="update_hstl" type='button' class='btn btn-dark'> Update Hostel Details</a>
+                    {{hstl.id}}
+        
+    </div>
+    <!-- /.container-fluid -->
+</div>
+
+
+{% endblock body %}

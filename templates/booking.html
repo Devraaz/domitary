@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block title %} Booking {% endblock title %}
+
+
+{% block head  %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{% static 'style1.css'%}" />
+<link type="text/css" rel="stylesheet" href="{% static 'bootstrap.min.css'%}"  />
+
+<style>
+
+</style>
+
+{% endblock head  %}
+{% block body %}
+
+
+
+
+{% for message in messages %}
+        <div class="alert alert-primary" role="alert">
+            <b style='text-align: center; margin: auto;'>{{ message }}</b>
+        </div>
+{% endfor %}
+
+
+<div style='background-image: url("static/pic8.jpg"); 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-position: center;
+    z-index: 0;' >
+    <section class="h-100 h-custom" >
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card rounded-3">
+                <img src= "static/pic4.jpg"
+                  class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                  alt="Sample photo">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2" style="margin : auto; font-family: forte; text-align: center; font-size: 4rem;">BOOKING </h3>
+      
+                  <form class="px-md-2" method='POST' action='confirm'>
+                      {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><b>{{hstl.hstl_name}}</b></h3>   
+                            <a href='#map' onclick="show_Map()" style="bottom: 0px;">See Map</a>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h3 name='price' >
+                                <span class="form"><b>Price</b></span>
+                                <input required readonly id='price' value="" name='price' > </input>
+                            </h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required class="form-control" type="email" name='cust_email'value="{{cus.email}}">
+                                <span class="form-label">Email</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required class="form-control" type="password" name='password'>
+                                <span class="form-label">Password</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" type="phone" name='cust_phone' value="{{cus.phone}}">
+                                <span class="form-label">Phone</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                                <span class="form-label">Bed</span>
+                                <input readonly class="form-control" type="text" name='bed' value="1">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                                <span class="form-label">Guest</span>
+                                <input readonly class="form-control" type="text" name='guest' value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" type="date" id ="myDate" required  name='check_in' >
+                                <span class="form-label" >Check In</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="time">Period of Stay:</label>
+                            <select required name="pos" id="pos" class='form-control' onchange="getSelectedValue();">
+                                <option> Choose</option>
+                                <option value='1 week'>1 week</option>
+                                <option value='2 week'>2 week</option>
+                                <option value='1 month'>1 month</option>
+                                <option value='2 month'>2 month</option>
+                                <option value='3 month'>3 month</option>
+                                <option value='4 month'>4 month</option>
+                                <option value='5 month'>5 month</option>
+                                <option value='6 month'>6 month</option>
+                                
+                            </select>
+ 
+                        </div>
+                    </div>
+
+
+                    
+                    <input hidden type='text' name='hstl_name' value="{{hstl.hstl_name}}">
+                    <input hidden type='text'name='owner_uname' value="{{hstl.username}}">
+                    <input hidden type='text' name='cust_name' value="{{cus.first_name}} {{cus.last_name}}">
+                    <input hidden type='file' value="{{ cus.id_proof.url}}" name='cust_id_proof'>
+                    <div class="form-btn">
+                        <button type='submit' class="submit-btn btn-success">Book Now</button>
+                    </div>
+                </form>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style='margin: auto; text-align: center;font-size: 30px; color: white;'>   See the Map </div>
+        <div id='map' style='width: 90%; height: 400px; margin: auto; font-size: 1.4rem;'></div>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+        <script>
+                
+            function show_Map(){
+                var lat="{{hstl.latitude}}";
+                var lng = "{{hstl.longitude}}";
+                var hstl_name = "{{hstl.hstl_name}}"
+                
+                var map = L.map('map').setView([lat, lng], 16);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                var marker = L.marker([lat, lng]).addTo(map)
+                    .bindPopup(hstl_name)
+                    .openPopup();
+            }
+        </script>
+      </section>
+        
+            
+      <br><br>
+        
+    </div>  
+    <script>
+
+        
+
+
+
+
+
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#myDate').attr('min',today);
+        
+        function getSelectedValue(){
+            var element = document.getElementById('pos').value;
+            
+            switch(element){
+                case '1 week':
+                    price = {{ hstl.ppw }};
+                    document.getElementById('price').value = price;
+                    break;
+                case '2 week':
+                    price = {{ hstl.ppw }};
+                    document.getElementById('price').value = price*2;
+                    break;
+                case '1 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price;
+                    break;
+                case '2 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price*2;
+                    break;
+                case '3 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price*3;
+                    break;
+                case '4 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price*4;
+                    break;
+                case '5 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price*5;
+                    break;
+                case '6 month':
+                    price = {{ hstl.ppm }};
+                    document.getElementById('price').value = price*6;
+                    break;
+                default:
+                    alert('Select the Period of Stay')
+            }
+
+        }
+
+
+
+                
+        
+
+
+
+    </script>
+
+
+{% endblock body %}

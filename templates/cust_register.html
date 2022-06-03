@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% block title %} Register {% endblock title %}
+
+
+{% block head %}
+    <style>
+        @media (min-width: 1025px) {
+            .h-custom {
+            height: 100vh !important;
+            }
+        }
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+        .card-registration .select-arrow {
+            top: 13px;
+        }
+        
+        .gradient-custom-2 {
+        /* fallback for old browsers */
+        background: #a1c4fd;
+        
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
+        }
+        
+        .bg-indigo {
+        background-color: #4835d4;
+        }
+        @media (min-width: 992px) {
+        .card-registration-2 .bg-indigo {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        }
+        @media (max-width: 991px) {
+        .card-registration-2 .bg-indigo {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        }
+    </style>
+
+  
+{% endblock head %}
+
+
+
+
+
+{% block body %}
+{% for message in messages %}
+        <div class="alert alert-primary" role="alert">
+            <b style='text-align: center; margin: auto;'>{{ message }}</b>
+        </div>
+{% endfor %}
+
+<div style='background-image: url("static/pic9.jpg"); 
+            background-attachment: fixed;
+            background-repeat: no-repeat; 
+            background-position: center;
+            z-index: 0' >
+        <section class="h-100 h-custom ">
+            
+
+            <div style="text-align: center; font-size: 30px;"><b>REGISTER</b></div>
+            
+            <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                        <div class="p-5">
+
+                                
+
+
+                                <form method='POST' action='' enctype = 'multipart/form-data'>
+                                    {% csrf_token %}
+                                    <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
+                                    <div class="row">
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input required type="text" id="cust_fname" class="form-control form-control-lg" name='first_name'/>
+                                        <label class="form-label" for="cust_fname">First name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input required type="text" id="cust_lname" class="form-control form-control-lg" name='last_name'/>
+                                        <label class="form-label" for="cust_lname">Last name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input type="email" id="cust_email" class="form-control form-control-lg" name='email'/>
+                                        <label class="form-label" for="cust_lname">Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input  required type="text" id="cust_name" class="form-control form-control-lg" name='username'/>
+                                        <label class="form-label" for="cust_lname">Username</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input  required type="password" id="pswd1" class="form-control form-control-lg" name='password1'/>
+                                        <label class="form-label" for="pswd1">Password</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-4 pb-2">
+                                        <div class="form-outline">
+                                        <input  required type="password" id="pswd2" class="form-control form-control-lg" name='password2'/>
+                                        <label class="form-label" for="pswd2">Confirm Password2</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                
+                                </div>
+                                </div>
+
+                                <div class="col-lg-6 bg-indigo text-white">
+                                <div class="p-5">
+                                    <h3 class="fw-normal mb-5">Contact Details</h3>
+                
+                                    <div class="mb-4 pb-2">
+                                    <div class="form-outline form-white">
+                                        <input  required type="text" id="cust_phone" class="form-control form-control-lg" name='phone'/>
+                                        <label class="form-label" for="cust_phone">Phone Number</label>
+                                    </div>
+                                    </div>
+                
+                                    <div class="mb-4 pb-2">
+                                    <div class="form-outline form-white">
+                                        <input  type="radio" class="form-check-input mb-6" id="radio1" name="gender" value="Male" >
+                                        <label class="form-check-label " for="radio1">Male</label>
+                                        <input type="radio" class="form-check-input mb-6" id="radio2" name="gender" value="Female"checked>
+                                        <label class="form-check-label" for="radio2">Female</label>
+                                    </div>
+                                    </div>
+                
+                                    <div class="row">
+                                    <div class="col-md-5 mb-4 pb-2">
+                
+                                        <div class="form-outline form-white">
+                                        <label class="form-label" for="form3Examplea4">DOB: </label>
+                                        </div>
+                
+                                    </div>
+                                    <div class="col-md-7 mb-4 pb-2">
+                
+                                        <div class="form-outline form-white">
+                                        <input  required type="date" id="cust_dob" class="form-control form-control-lg" name='dob'/>
+                                        
+                                        </div>
+                
+                                    </div>
+                                    </div>
+                
+                                    <div class="mb-4 pb-2">
+                                    <div class="form-outline form-white">
+                                        <input required  type="textfield" id="adrs" class="form-control form-control-lg" name='address' />
+                                        <label class="form-label" for="adrs">Address</label>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                    <div class="col-md-5 mb-4 pb-2">
+                
+                                        <div class="form-outline form-white">
+                                        <input  required type="text" id="cust_city" class="form-control form-control-lg" name='city' placeholder='Bhubaneswar...'/>
+                                        <label class="form-label" for="cust_city">Your City/Town</label>
+                                        </div>
+                
+                                    </div>
+                                    <div class="col-md-7 mb-4 pb-2">
+                
+                                        <div class="form-outline form-white">
+                                        <input  required type="text" id="cust_pin" class="form-control form-control-lg" name='pin_code'/>
+                                        <label class="form-label" for="cust_pin">Pin Code</label>
+                                        </div>
+                
+                                    </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-7 mb-4 pb-2">
+                    
+                                        <div class="form-outline form-white">
+                                            <input required   type="file" class="form-control" name="id_proof">
+                                            <label for="cust_proof">ID PROOF</label>
+                                        </div>
+                    
+                                        </div>
+                                        <div class="col-md-5 mb-4 pb-2">
+                    
+                                        <div class="form-outline form-white">
+                                            <input required   type="file" class="form-control" name="profile_pic">
+                                            <label for="cust_proof">Profile Photo</label>
+                                        </div>
+                    
+                                        </div>
+                                    </div>
+                
+                                    
+                
+                                    <button type="submit" class="btn btn-light btn-lg"
+                                    data-mdb-ripple-color="dark">Register</button>
+                                </form>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <br><br><br>
+</div>
+
+
+
+
+
+{% endblock body %}

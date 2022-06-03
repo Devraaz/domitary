@@ -1,0 +1,132 @@
+{% extends 'details/base1.html' %}
+{% block title %}UPDATE {% endblock title %}
+
+{% block head %}
+
+{% endblock head %}
+{% block body %}
+
+<form class='container-flex' method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {% for message  in messages  %}
+    <b style='text-align: center'>{{ message }}</b>
+    {% endfor %}
+    <div style="text-align: center; font-size: 30px; padding: 10px;">UPDATE HOSTEL DETAILS</div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="name">Username</label>
+        <input readonly  type="username" class="form-control" value="{{hstl.username}}" name="username" >
+      </div>
+      <div class="form-group col-md-4">
+        <label for="phone">Password</label>
+        <input required type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="phone">Phone Number</label>
+        <input required type="phone" class="form-control" name="phone" value="{{hstl.phone}}" placeholder="Phone NUmber">
+      </div>
+    
+      <div class="form col-md-4">
+        <label for="hstl_name">Hostel Name</label>
+        <input required type="text" class="form-control" name="hstl_name"value="{{hstl.hstl_name}}" placeholder="Hostel Name">
+      </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="street">Address</label>
+      <input  type="text" class="form-control" name="street" value="{{hstl.street}} "placeholder="Street,Lane....">
+    </div>
+    
+    
+    <div class="form-group col-md-3 ">
+      <label for="locatino">GPS Location</label><br>
+    </div>
+    <div class="form-group col-md-3 ">
+      <button  class='btn btn-primary' onclick="getLocation()">Get Live Location</button>
+    </div>
+    <div class='form-group col-md-3'>
+       <input required type="text" class="form-control col-md-6" id="latitude"  value="{{hstl.latitude}} "name='latitude' placeholder='Latitude'>
+    </div>
+    <div class='form-group col-md-3'>
+      <input required type="text" class="form-control col-md-6" id="longitude" value="{{hstl.longitude}}" name='longitude' placeholder='Longitude'>
+    </div>
+
+    <br>
+    <label for="inputState" class='col-md-4'>City</label>
+    <div class="form-check col-md-4" >
+      
+        <input type="radio" class="form-check-input" id="radio1" name="city" value="Bhubaneswar" checked>
+        <label class="form-check-label" for="radio1">Bhubaneswar</label>
+    </div>
+    <div class="form-check col-md-4">
+        <input type="radio" class="form-check-input" id="radio2" name="city" value="Cuttack">
+        <label class="form-check-label" for="radio2">Cuttack</label>
+    </div>
+    <br>
+    <label for="inputState" class='col-md-4'>Hostel Type</label>
+    <div class="form-check col-md-4" >
+      
+        <input type="radio" class="form-check-input" id="radio1" name="hstl_type" value="Boys Hostel" checked>
+        <label class="form-check-label" for="radio1">Boys Hostel</label>
+    </div>
+    <div class="form-check col-md-4">
+        <input type="radio" class="form-check-input" id="radio2" name="hstl_type" value="Girls hostel">
+        <label class="form-check-label" for="radio2">Girls Hostel</label>
+    </div>
+        
+        
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>Odisha</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Zip</label>
+        <input required type="text" value="{{hstl.zip}}" class="form-control" name="zip">
+      </div>
+    </div>
+
+   <div class='from-row'>
+    <div class="form-group col-md-4">
+        <label for="inputZip">Number of Rooms</label>
+        <input type="text" value="{{hstl.rooms}}" class="form-control" name="rooms">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Number of Beds</label>
+        <input required type="text"  value="{{hstl.beds}}" class="form-control" name="beds">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Price per week</label>
+        <input type="text" value="{{hstl.ppw}}" class="form-control" name="ppw">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Price per month</label>
+        <input required type="text" value="{{hstl.ppm}}" class="form-control" name="ppm">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Beds Available</label>
+        <input required type="text" value="{{hstl.rooms_avail}}" class="form-control" name="rooms_avail">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Aadhar Number</label>
+        <input required type="text" value="{{hstl.aadhar}}" class="form-control" name="aadhar">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">ID PROOF</label>
+        <input  type="file" value="{{hstl.id_proof.url}}"class="form-control" name="id_proof">
+      </div>
+
+
+      <div class="form-group col-md-12">
+        <label for="inputZip">Upload your Hostel Photo</label>
+
+        <input   type="file" value="{{hstl.image.url}}" class="form-control" name="image">
+      </div>
+
+    
+  </form>
+
+
+{% endblock body %}

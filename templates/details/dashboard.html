@@ -1,0 +1,63 @@
+{% extends 'details/base1.html' %}
+{% block title %} Dashboard {% endblock title %}
+{% block head %}
+<style>
+.card{
+    font-size: 18px;
+
+}
+
+
+</style>
+
+{% endblock head %}
+
+
+{% block body %}
+{% for message in messages %}
+    <div class="alert alert-primary" style='text-align: cetner;' role="alert">
+        <b style='text-align: center; margin: auto;'>{{ message }}</b>
+    </div>
+{% endfor %}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row" id="main" >
+            <div class="col-sm-12 col-md-12 well" id="content">
+
+                {% if user.is_authenticated %}
+                <h1>Welcome {{ user.first_name }}      </h1>             
+                                               
+                    {% endif %}
+                   
+                </div>
+                <H2 style='text-align: center;'> Your Hostel Details</H2>
+                <div class='row' style='text-align: center;'>
+                    <div class="card col-sm-4 well">
+                        Total Beds<br>
+                         {{hstl.beds}}
+                    </div>
+                    <div class="card col-sm-4 well">
+                        Beds Available:<br>
+                        <form method='POST' action=''>
+                            {% csrf_token %}
+                            <input type='text' style='text-align: ceenter; margin: auto;' value="{{hstl.rooms_avail}}" name='beds'><br>
+                            <button type='submit' class='btn btn-secondary' style='width: 40%; align: center; text: white; margin: auto;'> UPDATE</button>
+                        </form>
+                    </div>
+                    <div class="card col-sm-4 well">
+                        Number of Bookings <br>
+                        {{count}}
+                    </div>
+                </div>
+                    
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+
+
+{% endblock body %}

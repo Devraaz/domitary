@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% block title %}Home {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+
+
+<style>
+.card:hover{
+    box-shadow: 10px 10px 50px grey;
+}
+</style>
+
+
+{% endblock head %}
+
+
+
+
+{% block body %}
+
+{% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        <b style='text-align: center; margin: auto;'>{{ message }}</b>
+    </div>
+{% endfor %}
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="static/pic5.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="static/pic4.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="static/pic6.jpg" alt="Third slide">
+        </div>
+        
+        <div class="carousel-caption">
+            <h1>Domitory</h1>
+            <p>No more Stranger Just Friends</p>
+          </div>
+        
+        
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div>
+<!-- Banner Close -->
+
+
+<div style='background-image:; 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-position: center;
+    z-index: 0;' >
+    <div class="page-heading">
+        <div class="container">
+            <h2>HOSTEL</h2><br>
+            <form method='GET'>
+                <div class="row" >
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Place..." name="place" style='font-size: 1.5rem;'>
+                </div>
+                <div class="col-sm-2">
+                    <input type="range"id='rangeInput' min ="500" max="10000" oninput="maxPrice.value = this.value" value='10000' style='font-size: 1.5rem;'>
+                </div>
+                Price
+                <div class="col-sm-2">
+                    <input type="number" id="maxPrice" min="500" max="10000" onkeyup="rangeInput.value = this.value" placeholder="Price..."  value='10000' name="price" style='font-size: 1.5rem;'>
+                </div>
+                <button type="submit" class="btn btn-primary col-sm-3" style='font-size: 2rem; border-radius: 55px;'>Search </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="container"  style='background-color:'>
+    
+        
+
+
+            
+            <div class="row">
+                {% for hs in hstl %}
+                    <div class="card col-sm-3 " style=" font-size: 18px; padding: 10px;margin: 4%; background-color: #E7E7DB">
+                        
+                            <img class='card-img-top' src="{{ hs.image.url }}"><br>
+                            <div class='card-body' > 
+                                
+                                <h1 id='hstl_name'> {{ hs.hstl_name }}</h1>
+                                <h2>Price: {{ hs.ppm}}/month</h2>
+                                <h3>{{hs.hstl_type}}</h3>
+                                Address: {{ hs.street }}<br>
+                                
+                                {% if request.session.cust %}
+                                    Price: {{hs.ppw}}/week<br>
+                                    Rooms: {{hs.rooms}}<br>
+                                    Beds: {{hs.beds}}<br>
+                                    Beds Available: {{hs.rooms_avail}}<br>
+                                    Phone: {{hs.phone}}<br>
+                                {% endif %}
+
+                                
+                                <input hidden id='lat' value='{{hs.latitude}}'>
+                                <input hidden id='lng' value='{{hs.longitude}}'>
+                                <input hidden id='hstl_nm' value='{{hs.hstl_name}}'>
+                                <a href='#map' onclick="showMap(document.getElementById('lat').value,document.getElementById('lng').value,document.getElementById('hstl_nm').value)" style="bottom: 0px;">See Map</a>
+                                <br>
+                            </div>         
+                            <form method="POST" action="booking" >
+                                {% csrf_token %}
+                                <input hidden type='text' name='hs_id' value='{{hs.user_id}}'>
+                                
+                                <button type='submit' href='booking' class='btn btn-success btn-lg col-sm-12 ' style="margin: auto; align: center; font-size: 2rem; border-radius: 55px;">Book</button>
+                            </form>
+                            
+                        
+                    </div>
+                    {% empty %}
+                    No Data Found
+                {% endfor %}
+
+                
+            </div>
+        
+        </div>
+
+        <div style='margin: auto; text-align: center;font-size: 30px;'>   See the Map </div>
+    <div id='map' style='width: 90%; height: 400px; margin: auto; font-size: 1.4rem;'>
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script>
+        function showMap( lat,  lng,  hstl_name){
+        
+               
+        var map = L.map('map').setView([lat, lng], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([lat, lng]).addTo(map)
+            .bindPopup(hstl_name)
+            .openPopup();
+    }
+    
+            
+    
+
+</script>
+<br><br><br>
+
+
+
+
+{% endblock body %}

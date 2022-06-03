@@ -1,0 +1,54 @@
+{% extends 'details/base1.html' %}
+{% block title %} Student Details {% endblock title %}
+
+{% block head %}
+<style>
+.table{
+    padding: 2px;
+    text-size: 18px;
+}
+
+</style>
+{% endblock head %}
+
+{% block body %}
+<h1 style='text-align: center;padding: 10px;'>Customer Activity</h1>
+<div class='container table-responsive'>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer email</th>
+            <th scope="col">Customer phone</th>
+            <th scope="col">Check In</th>
+            <th scope="col">Period Of Stay</th>
+            <th scope="col">Price</th>
+            <th scope="col">Booking Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+            {% for l in log%}
+            <tr>
+                
+                <th scope="row">-></th>
+                <td>{{l.cust_name}}</td>
+                <td>{{l.cust_email}}</td>
+                <td>{{l.cust_phone}}</td>
+                <td>{{l.check_in}}</td>
+                <td>{{l.pos}}</td>
+                <td>{{l.price}}</td>
+                <td>{{l.date}}</td>
+                
+            </tr>
+            {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+{% endblock body %}

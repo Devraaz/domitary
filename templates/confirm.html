@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Confirmation {% endblock title %}
+
+{% block head %}
+<style>
+.title{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'comic sans ms';
+    color: white;
+    height: 60%;
+
+}
+</style>
+
+{% endblock head %}
+
+
+{% block body %}
+
+<div class='container' style='background-image: url("static/pic8.jpg"); height: 60%; background-attachment: fixed;'>
+    <div class='title'>
+
+        <span style='font-size: 40px; font-family: "Lucida Calligraphy";'>Thank you </span><br>
+        You Bed is Sucessfully Booked<br>
+        You can check-in anytime in you given date<br>
+        <p style='color: black;'>
+            To check you bookings <br><a href='cust_booking'>Click Here</a><br>
+            Click here to return to home page <br><a href='/'> Home</a>
+        </p>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock body %}
