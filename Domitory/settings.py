@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 import os
 import smtplib
@@ -81,7 +81,11 @@ WSGI_APPLICATION = 'Domitory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES=['default'].update(db_from_env)
+
+
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hostel',
@@ -90,7 +94,7 @@ DATABASES = {
         'HOST': 'localhost',
         'CONN_MAX_AGE': 9
     }
-}
+}"""
 
 
 # Password validation
