@@ -134,7 +134,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 
 
@@ -149,4 +151,3 @@ EMAIL_HOST_USER = "domitory.8055@gmail.com"
 EMAIL_HOST_PASSWORD = 'rfxadjgdnaaptjtw'
 #EMAIL_USE_TLS= True
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
