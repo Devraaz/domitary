@@ -9,6 +9,9 @@
 .card:hover{
     box-shadow: 10px 10px 50px grey;
 }
+.checked {
+    color: orange;
+  }
 </style>
 
 
@@ -26,7 +29,7 @@
 {% endfor %}
 
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style='top: 90px;'>
         <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -61,7 +64,7 @@
     </div>
 <!-- Banner Close -->
 
-
+<br><br>
 <div style='background-image:; 
     background-attachment: fixed;
     background-repeat: no-repeat; 
@@ -99,7 +102,7 @@
             
             <div class="row">
                 {% for hs in hstl %}
-                    <div class="card col-sm-3 " style=" font-size: 18px; padding: 10px;margin: 4%; background-color: #E7E7DB">
+                    <div class="card col-sm-3 " style=" font-size: 18px; padding: 10px;margin: 4%; background-color: #fff7de">
                         
                             <img class='card-img-top' src="{{ hs.image.url }}"><br>
                             <div class='card-body' > 
@@ -124,9 +127,19 @@
                                 <a href='#map' onclick="showMap(document.getElementById('lat').value,document.getElementById('lng').value,document.getElementById('hstl_nm').value)" style="bottom: 0px;">See Map</a>
                                 <br>
                             </div>         
+                            <div class="product-ratings">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item "><i class="fa fa-star checked"></i></li>
+                                    <li class="list-inline-item {{selected}}"><i class="fa fa-star checked"></i></li>
+                                    <li class="list-inline-item {{selected}}"><i class="fa fa-star checked"></i></li>
+                                    <li class="list-inline-item "><i class="fa fa-star"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
                             <form method="POST" action="booking" >
                                 {% csrf_token %}
                                 <input hidden type='text' name='hs_id' value='{{hs.user_id}}'>
+                                
                                 
                                 <button type='submit' href='booking' class='btn btn-success btn-lg col-sm-12 ' style="margin: auto; align: center; font-size: 2rem; border-radius: 55px;">Book</button>
                             </form>
