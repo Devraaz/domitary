@@ -81,11 +81,10 @@ WSGI_APPLICATION = 'Domitory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES=['default'].update(db_from_env)
 
 
-"""DATABASES = {
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hostel',
@@ -94,7 +93,7 @@ DATABASES=['default'].update(db_from_env)
         'HOST': 'localhost',
         'CONN_MAX_AGE': 9
     }
-}"""
+}
 
 
 # Password validation
