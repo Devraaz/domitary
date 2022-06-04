@@ -95,7 +95,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-db_from_env = dj_database_url.coonfig(conn_max_age =600)
+db_from_env = dj_database_url.config(conn_max_age =600)
 DATABASES['DEFAULT'].update(db_from_env)
 
 # Password validation
