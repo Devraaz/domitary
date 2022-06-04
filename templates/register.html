@@ -8,10 +8,10 @@
             background-attachment: fixed;
             background-repeat: no-repeat; 
             background-position: center;
-            z-index: 0' >
+            z-index: 0; top: 180px;' >
 
 
-<section class="vh-100" >
+<section class="vh-100" style='top: 180px;' >
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-12 col-xl-11" style="font-size: 1.5rem;">
@@ -23,7 +23,7 @@
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register as Owner</p>
 
                     {% for message in messages %}
-                        <div class="alert alert-primary" style='text-align: cetner;' role="alert">
+                        <div class="alert alert-primary wells" style='text-align: cetner;' role="alert">
                             <b style='text-align: center; margin: auto;'>{{ message }}</b>
                         </div>
                     {% endfor %}

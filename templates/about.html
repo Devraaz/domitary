@@ -2,72 +2,224 @@
 {% block title %}About {% endblock title %}
 
 {% block head %}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
 <style>
-.title{
-    font-family: 'Lucida Calligraphy';
-    font-size: 50px;
-    color: black;
-    text-align: center;
-
-}
-.about{
-    font-family: Consolas;
-    font-size: 25px;
-}
-blockquote{
-    width: 50%;
+    #myPage {
+        font: 400 18px/1.8 Lato, sans-serif;
+        color: #777;
+        width: 100%;
+      }
+ .title{
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  blockquote{
     text-align: center;
     margin: auto;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    width: 40%;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
 }
-@media screen and (max-width: 800px) {
-    .title{font-size: 25px;}
-    .about{font-size: 18px;}
-    blockquote{width: 100%;}
+
+.flip-box {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border-radius: 50%;
   }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+ 
+  
 </style>
 
 {% endblock head %}
 
 {% block body %}
-<div class='container' style='background-image: linear-gradient(#8443E9, #B5B6B1) '>
-<div class='title'>About Us</div><br>
-<div class='container about'>
-    &nbsp;&nbsp;Hello Everyone. You are welcome to the fast growing Hostel Searching Web-app. A place where you can find the 
-    best hostel that suits your budget, your location and your environment. This is a place where you can find plenty 
-    of hostel both for Boys and Girls. This site offers comprehensive free listings for all hostels worldwide including:<br>
-    <ul style="list-style-type:disc;">
-        <li>Quick and easy searching</li>
-        <li>Direct contact information</li>
-        <li>Online Booking System</li>
-        <li>Original hostel photographs</li>
-        <li>Fully Verified Owner and Place</li>
-        <li>Save money, time and sanity</li>
-        
-    </ul>
-    
-    &nbsp;Now no more running here and there for hostels. Just open the app book the beds and check-in in the hostels.<br><br>
-    <blockquote>No need to worry <br>
-    Because You are in Domitory</blockquote>
-</div>
-<div class='container about'>
-    <br><br>
-    &nbsp;&nbsp;&nbsp;We are a group of four memebers working on a project to serve you the best experience for searching your hostel and 
-    we will continue to full-fill your requirements.  Stay connected with us :)
 
-
+<div id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Container (The Band Section) -->
+    <div id="band" class="container text-center">
+        <p class='title'>THE DOMITORY</p>
+        <p><em>We love to create!</em></p>
+        <p>We have created a fictional website. You are welcome to the fast growing Hostel Searching Web-app. A place where you can find the 
+            best hostel that suits your budget, your location and your environment. This is a place where you can find plenty 
+            of hostel both for Boys and Girls. This site offers comprehensive free listings for all hostels worldwide including :
+            Quick and easy searching, Direct contact information, Online Booking System, Original hostel photographs, Fully Verified Owner and Place, 
+            Save money, time and sanity.Now no more running here and there for hostels. Just open the app book the beds and check-in in the hostels.<br><br>
+            <blockquote>No need to worry <br>
+            Because You are in Domitory</blockquote><br>
+            We are a group of four memebers working on a project to serve you the best experience for searching your hostel and 
+        we will continue to full-fill your requirements.  Stay connected with us :)
+            
+        </p>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                
+                    <div class="flip-box">
+                    <p class="text-center"><strong><b>PANKAJ KUMAR ROUT</b></strong></p>
+                    <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="http://pankxe.com/wp-content/uploads/2022/03/a1.png"  alt="Random Name"style="width: 200px; height: 200px; border-radius: 50%;">
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Design and Develop</p>
+                        <p>Domitory</p>
+                        <p>Member since 2018</p>
+                    </div>
+                    </div>
+                    </div><br><br>
+                </div>
+                
+                <div class="col-sm-3">
+                
+                    <div class="flip-box">
+                    <p class="text-center"><strong><b>DEVRAJ DORA</b></strong></p>
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                        <img src="static/pic21.jpg"  alt="Random Name"style="width: 200px; height: 200px; border-radius: 50%;">
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Design and Develop</p>
+                        <p>Domitory</p>
+                        <p>Member since 2018</p>
+                    </div>
+                    </div>
+                    </div><br><br>
+                </div>
+                
+                <div class="col-sm-3">
+                
+                    <div class="flip-box">
+                    <p class="text-center"><strong><b>SAURAV MOHANTY</b></strong></p>
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                        <img src="static/pic21.jpg"  alt="Random Name"style="width: 200px; height: 200px; border-radius: 50%;">
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Design and Develop</p>
+                        <p>Domitory</p>
+                        <p>Member since 2018</p>
+                    </div>
+                    </div>
+                    </div><br><br>
+                </div>
+                
+                <div class="col-sm-3">
+                
+                    <div class="flip-box">
+                    <p class="text-center"><strong><b>SANUJIT CHHOTARAY</b></strong></p>
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                        <img src="http://pankxe.com/wp-content/uploads/2022/03/a1.png"  alt="Random Name"style="width: 200px; height: 200px; border: 5px;">
+                    </div>
+                    <div class="flip-box-back">
+                        <p>Design and Develop</p>
+                        <p>Domitory</p>
+                        <p>Member since 2018</p>
+                    </div>
+                    </div>
+                    </div><br><br>
+                </div>
+                <br><br>
+            </div>
+    </div>
+    <br>
+</div>  
 </div>
+
 <br>
 
+<!--
+<div class='container' style='background-image: linear-gradient(#8443E9, #B5B6B1) '>
+    <div class='title'>About Us</div><br>
+    <div class='container about'>
+        &nbsp;&nbsp;Hello Everyone. You are welcome to the fast growing Hostel Searching Web-app. A place where you can find the 
+        best hostel that suits your budget, your location and your environment. This is a place where you can find plenty 
+        of hostel both for Boys and Girls. This site offers comprehensive free listings for all hostels worldwide including:<br>
+        <ul style="list-style-type:disc;">
+            Quick and easy searching
+            Direct contact information
+            Online Booking System
+            Original hostel photographs
+            Fully Verified Owner and Place
+            Save money, time and sanity
+            
+        </ul>
+        
+        &nbsp;Now no more running here and there for hostels. Just open the app book the beds and check-in in the hostels.<br><br>
+        <blockquote>No need to worry <br>
+        Because You are in Domitory</blockquote>
+    </div>
+    <div class='container about'>
+        <br><br>
+        &nbsp;&nbsp;&nbsp;We are a group of four memebers working on a project to serve you the best experience for searching your hostel and 
+        we will continue to full-fill your requirements.  Stay connected with us :)
+
+
+    </div>
+    <br>
+
 
 
 
 </div>
-
-
+-->
 {% endblock body %}

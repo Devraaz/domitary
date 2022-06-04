@@ -1,0 +1,1553 @@
+[
+{
+    "model": "hostel.cust_details",
+    "pk": 7,
+    "fields": {
+        "first_name": "Devraj",
+        "last_name": "Dora",
+        "email": "devrajdora445@gmail.com",
+        "username": "devraj445",
+        "password": "pbkdf2_sha256$320000$rNUD8Pw6yYim6n9jTzdXEA$D72YM0",
+        "phone": "8897876467",
+        "gender": "Male",
+        "dob": "2000-11-19",
+        "address": "Qr No. L-224 HAL Township Sunabeda 2",
+        "city": "Sunabeda-2 ",
+        "pin_code": 763002,
+        "id_proof": "media/idproof/20220524220513IMG20190627150200.jpg",
+        "profile_pic": "media/customer/20220524220513IMG20190512152950.jpg"
+    }
+},
+{
+    "model": "hostel.cust_details",
+    "pk": 8,
+    "fields": {
+        "first_name": "Swadhin",
+        "last_name": "Raj",
+        "email": "swadhinraj@gmail.com",
+        "username": "swadhin15",
+        "password": "pbkdf2_sha256$320000$2SsPWfbdsOnNEtn6yRTaw3$UnWWK0abLr9e12pRvnOBLV9bkbGkaK3bbkDEX9bUKQY=",
+        "phone": "8897876467",
+        "gender": "Male",
+        "dob": "2000-11-19",
+        "address": "Housing board Sunabeda 1",
+        "city": "Sunabeda-1",
+        "pin_code": 763002,
+        "id_proof": "media/idproof/20220524221958IMG20190521183159.jpg",
+        "profile_pic": "media/customer/20220524221958IMG20190422190514.jpg"
+    }
+},
+{
+    "model": "hostel.cust_details",
+    "pk": 9,
+    "fields": {
+        "first_name": "Pankaj Kumar ",
+        "last_name": "Rout",
+        "email": "pankajkumar@gmail.com",
+        "username": "pankaj112",
+        "password": "pbkdf2_sha256$320000$DVXvNA03bGijUU5L9LMZNR$v13xIFhyMrI3c5O+AO6RBqNgM5OaAFB3hXU7nqtJcqI=",
+        "phone": "323243462",
+        "gender": "Male",
+        "dob": "2000-12-19",
+        "address": "Housing board Sunabeda 1",
+        "city": "Anugul",
+        "pin_code": 763842,
+        "id_proof": "media/idproof/20220530150953IMG20190506170142.jpg",
+        "profile_pic": "media/customer/20220530150953IMG-20191119-WA0042.jpg"
+    }
+},
+{
+    "model": "hostel.activity_log",
+    "pk": 6,
+    "fields": {
+        "cust_name": "Swadhin Raj",
+        "cust_email": "swadhinraj@gmail.com",
+        "cust_phone": "8897876467",
+        "check_in": "2022-06-01",
+        "pos": "1 month",
+        "price": 1600,
+        "cust_id_proof": "",
+        "bed": 1,
+        "guest": 1,
+        "owner_uname": "santanu45",
+        "hstl_name": "Santanu Hostel",
+        "date": "2022-05-30"
+    }
+},
+{
+    "model": "hostel.activity_log",
+    "pk": 7,
+    "fields": {
+        "cust_name": "Swadhin Raj",
+        "cust_email": "swadhinraj@gmail.com",
+        "cust_phone": "8897876467",
+        "check_in": "2022-05-31",
+        "pos": "1 month",
+        "price": 3000,
+        "cust_id_proof": "",
+        "bed": 1,
+        "guest": 1,
+        "owner_uname": "satyanar",
+        "hstl_name": "Satya Hostel",
+        "date": "2022-05-30"
+    }
+},
+{
+    "model": "hostel.activity_log",
+    "pk": 8,
+    "fields": {
+        "cust_name": "Swadhin Raj",
+        "cust_email": "swadhinraj@gmail.com",
+        "cust_phone": "8897876467",
+        "check_in": "2022-06-01",
+        "pos": "4 month",
+        "price": 4000,
+        "cust_id_proof": "",
+        "bed": 1,
+        "guest": 1,
+        "owner_uname": "sanujit112",
+        "hstl_name": "Sanujit Hostel",
+        "date": "2022-05-30"
+    }
+},
+{
+    "model": "hostel.activity_log",
+    "pk": 9,
+    "fields": {
+        "cust_name": "Pankaj Kumar  Rout",
+        "cust_email": "pankajkumar@gmail.com",
+        "cust_phone": "323243462",
+        "check_in": "2022-06-01",
+        "pos": "1 month",
+        "price": 3000,
+        "cust_id_proof": "",
+        "bed": 1,
+        "guest": 1,
+        "owner_uname": "satyanar",
+        "hstl_name": "Satya Hostel",
+        "date": "2022-05-30"
+    }
+},
+{
+    "model": "hostel.activity_log",
+    "pk": 10,
+    "fields": {
+        "cust_name": "Swadhin Raj",
+        "cust_email": "swadhinraj@gmail.com",
+        "cust_phone": "8897876467",
+        "check_in": "2022-06-06",
+        "pos": "1 month",
+        "price": 1600,
+        "cust_id_proof": "",
+        "bed": 1,
+        "guest": 1,
+        "owner_uname": "pankaj11",
+        "hstl_name": "Pankaj Hostel",
+        "date": "2022-06-02"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$Medesk48pbhaME1BtkoDdc$DSIT8zH+NkDLPZqr99Wnz2+kEW1pYSTTPjljsQm+YO4=",
+        "last_login": "2022-06-03T07:25:34.659Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-05-19T15:42:20.401Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$CcXMfvDNMNpEd3tYVFtKUx$UAkidpzHdhmNj0ZuHkmGaGCfAQ7MhUyu7Pm8IuoU2nU=",
+        "last_login": "2022-05-27T05:57:52.669Z",
+        "is_superuser": false,
+        "username": "devrajl224",
+        "first_name": "Devraj",
+        "last_name": "Dora",
+        "email": "devrajdora445@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-19T19:42:18.557Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$srRXLWzOHovhTi7kUXLfzr$M64l4dNaii10BaQkj4BzoK7O42YJ/f/ynrWHmw73gXE=",
+        "last_login": "2022-06-03T07:30:17.434Z",
+        "is_superuser": false,
+        "username": "swadhin15",
+        "first_name": "Swadhin",
+        "last_name": "Raj",
+        "email": "swadhinraj@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-19T19:53:21.753Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$sI9GsHaPnYD8gcac8ZHZaS$JElc5WQ5KDyD610k1V/Q0z58cD/bM6msKo1So9vlugg=",
+        "last_login": "2022-05-30T11:18:33.441Z",
+        "is_superuser": false,
+        "username": "satyanar",
+        "first_name": "Satya",
+        "last_name": "Narayan",
+        "email": "satyanara@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-19T20:00:33.524Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$n2COcqHo3uIUK1Es7FkozL$tGAGYwe9+4pAG7E2YKip1g8sk9wegG/TXfaOvYAmv34=",
+        "last_login": "2022-06-04T13:42:19.228Z",
+        "is_superuser": false,
+        "username": "santanu45",
+        "first_name": "Santanu",
+        "last_name": "Takri",
+        "email": "santanutakri@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-19T21:07:05.846Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$Uqz9KTZkU74wMNX4QF2IcZ$dYgG60XZwzlbTXuIc/2XGzHOoYxvvNRYKSL0G105O5o=",
+        "last_login": "2022-06-02T20:13:23.609Z",
+        "is_superuser": false,
+        "username": "sanujit112",
+        "first_name": "Sanujit",
+        "last_name": "Chhottray",
+        "email": "sanujit@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-23T16:43:13.523Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$h8LUGITmuDZ6sYrS09ygmV$kLe8jM2wEzH/IC0wqAcLQrRAGpSwDOpIvy29y4XqK4k=",
+        "last_login": "2022-06-02T13:44:23.898Z",
+        "is_superuser": false,
+        "username": "pankaj11",
+        "first_name": "pankaj",
+        "last_name": "rout",
+        "email": "pankaj@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-06-01T05:26:59.622Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2nz45uis94v3982r2kv1cwu9zxn75g6p",
+    "fields": {
+        "session_data": "eyJjdXN0Ijo4LCJjdXN0X2ZuYW1lIjoiU3dhZGhpbiJ9:1numwJ:kbAQ27xKwT_Ogp-H8j44xuIZXqoZn1GmYOuWHLskRDs",
+        "expire_date": "2022-06-11T03:16:31.803Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5ho86wi431grtzbb0er30ku20nv17di6",
+    "fields": {
+        "session_data": "eyJjdXN0Ijo4LCJjdXN0X2ZuYW1lIjoiU3dhZGhpbiJ9:1nxVbx:v05uFw64fVRf25Lfs5jaHhWtq_zj2BbmqXLLdNIapis",
+        "expire_date": "2022-06-18T15:22:45.296Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5q8brda384wypqlwjdaw1qfhpplhhw8c",
+    "fields": {
+        "session_data": "eyJjdXN0Ijo4LCJjdXN0X2ZuYW1lIjoiU3dhZGhpbiJ9:1ntYy0:3G_x43Y8lw8rW_pFQPSwRaZSNJQ7NsWkXDpqWzpDbOg",
+        "expire_date": "2022-06-07T18:09:12.943Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "okdtulgc503qeo7t791g8ool55vn3soa",
+    "fields": {
+        "session_data": ".eJxVjk0OgyAQhe_CujGARKWrpvuewQzMIFiFRDQumt69mNikXb6_L-_FethW32-Zlj4guzLFLr-eAfukeAQ4QhxSZVNcl2Cqo1Kdaa4eCWm6n90_gIfsy5qDJt5yECBqx2uhkYSyrmucRA1SSiRpjBWtQdeh0k5SR9BKUJawMaJA0x7Pk-oraIYwFXreAX2IC4y34bDKy5m9P7-qSnU:1nsirk:eAa18d9I9kv7S97vEoEDuHmuarfbR4dhPLjAdUM7LtY",
+        "expire_date": "2022-06-05T10:31:16.981Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "sacx1a79iplard5i2j1iqyfn6s0vl6g1",
+    "fields": {
+        "session_data": "e30:1nrz8L:WAPm5ycnhb5Bh4k6aoEC4TMAVCUDZ9HqIm7J6OgSqRY",
+        "expire_date": "2022-06-03T09:41:21.894Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t7zdpp9tmy1ryib7kagdtsl60497gp9t",
+    "fields": {
+        "session_data": ".eJxVjksOgjAURffSsWn6pzgyzl0Dee1rKYgloRAHxr1bDAOd3dzPyX2RDrY1dVsJSzcgORNOTr-eA38PeQ9whNzP1M95XQZH9wo90kJvM4bpenT_AAlKquvQgkHmmWaISrTRSAsqKuaVYFzFVkTOVMMxOAPSuga01MZyiKK1aKSuUL-V9fvRHjo8YJgquzwB05AXGC_9btWPD_L-ALuRR_8:1ntYJT:1_MxfTxW3zerjpUCMApQcRhbBJ7JQhGsxULeGoBk0gQ",
+        "expire_date": "2022-06-07T17:27:19.985Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-05-19T20:47:13.282Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "devrajl224",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-05-19T20:47:56.902Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "priyanka12",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-05-20T18:35:19.583Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "priyanka12",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-05-20T19:42:58.274Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "4",
+        "object_repr": "santanu45",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-05-20T19:56:13.517Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "5",
+        "object_repr": "devrajl224",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-05-20T19:58:16.703Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "devrajl224",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-05-20T21:00:27.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "swadhin15",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-05-21T03:19:18.743Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "9",
+        "object_repr": "swadhin15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-05-21T03:19:18.859Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "8",
+        "object_repr": "swadhin15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-05-21T03:19:18.935Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "7",
+        "object_repr": "swadhin15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-05-21T07:00:50.308Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "10",
+        "object_repr": "swadhin15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-05-21T07:00:50.383Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "6",
+        "object_repr": "swadhin15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-05-21T07:00:50.422Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "5",
+        "object_repr": "devrajl224",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-05-21T20:22:17.370Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "satyanar",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-05-22T10:40:31.030Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "17",
+        "object_repr": "swadhin15",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-05-22T10:44:24.355Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "18",
+        "object_repr": "devrajl224",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-05-22T10:45:22.019Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "18",
+        "object_repr": "devrajl224",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-05-24T06:35:00.252Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "2",
+        "object_repr": "Swadhin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Gender\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-05-24T06:35:14.324Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "1",
+        "object_repr": "Devraj",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Gender\", \"City\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-05-24T15:07:53.776Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "3",
+        "object_repr": "Sanujit",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-05-24T15:07:53.882Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "2",
+        "object_repr": "Swadhin",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-05-24T15:07:53.898Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "1",
+        "object_repr": "Devraj",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-05-24T16:01:31.867Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "5",
+        "object_repr": "Devraj",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Gender\", \"City\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-05-24T16:33:42.328Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "6",
+        "object_repr": "Swadhin",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-05-24T16:33:42.416Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "5",
+        "object_repr": "Devraj",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-05-24T16:33:42.434Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "cust_details"
+        ],
+        "object_id": "4",
+        "object_repr": "Santanu",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-05-30T09:14:38.272Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "5",
+        "object_repr": "Satya Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-05-30T09:14:38.454Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "4",
+        "object_repr": "Devraj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-05-30T09:14:38.502Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "3",
+        "object_repr": "Satya Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-05-30T09:14:38.587Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "2",
+        "object_repr": "Sanujit Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-05-30T09:14:38.614Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "1",
+        "object_repr": "Santanu Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-05-31T20:18:03.353Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "20",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2022-05-31T20:18:03.440Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "19",
+        "object_repr": "sanujit112",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2022-05-31T20:18:03.466Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "12",
+        "object_repr": "santanu45",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2022-06-01T07:03:20.739Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "9",
+        "object_repr": "pankaj11",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2022-06-01T07:11:59.666Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "7",
+        "object_repr": "santanu45",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2022-06-02T20:09:29.812Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "7",
+        "object_repr": "santanu45",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Latitude\", \"Longitude\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2022-06-02T20:11:51.752Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "8",
+        "object_repr": "sanujit112",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Password\", \"Latitude\", \"Longitude\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.697Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "34",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.752Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "33",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.829Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "32",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.863Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "31",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.919Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "30",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2022-06-03T07:26:10.959Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "29",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.039Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "28",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.082Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "27",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.105Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "26",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.151Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "25",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.193Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "24",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.239Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "23",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.261Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "22",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.283Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "21",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.306Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "20",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.329Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "19",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.349Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "18",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.371Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "17",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.416Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "16",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.438Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "15",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.475Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "14",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.507Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "13",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.527Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "12",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2022-06-03T07:26:11.618Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "activity_log"
+        ],
+        "object_id": "11",
+        "object_repr": "Pankaj Hostel",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2022-06-03T07:26:41.839Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "hostel",
+            "hostel_detail"
+        ],
+        "object_id": "9",
+        "object_repr": "pankaj11",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Rooms avail\"]}}]"
+    }
+},
+{
+    "model": "hostel.hostel_detail",
+    "pk": 4,
+    "fields": {
+        "username": "swadhin15",
+        "password": "",
+        "phone": "7750841666",
+        "hstl_name": "Swadhin Hostel",
+        "street": "Humara Hstl near Yamlok",
+        "latitude": "20.7298922",
+        "longitude": "84.8291919",
+        "city": "Bhubaneswar",
+        "hstl_type": "Boys Hostel",
+        "zip": "789686",
+        "rooms": 20,
+        "beds": 50,
+        "ppw": 500,
+        "ppm": 3000,
+        "rooms_avail": 20,
+        "aadhar": "748375955432",
+        "id_proof": "media/idproof/20220601154338IMG-20200222-WA0008.jpg",
+        "image": "media/20220601154338Screenshot_2020-02-22-10-06-06-58_wm.jpg"
+    }
+},
+{
+    "model": "hostel.hostel_detail",
+    "pk": 7,
+    "fields": {
+        "username": "santanu45",
+        "password": "1234asdf",
+        "phone": "8878736272",
+        "hstl_name": "Santanu Hostel",
+        "street": "Near Infocity Civet College",
+        "latitude": "20.3421718",
+        "longitude": "85.8119823",
+        "city": "Bhubaneswar",
+        "hstl_type": "Boys Hostel",
+        "zip": "751031",
+        "rooms": 34,
+        "beds": 300,
+        "ppw": 400,
+        "ppm": 2400,
+        "rooms_avail": 50,
+        "aadhar": "23453452545",
+        "id_proof": "media/idproof/20220601124159WhatsApp_Image_2022-03-16_at_7.45.32_PM.jpeg",
+        "image": "media/20220601124159mattress-storage-g8e92104e3_1920.jpg"
+    }
+},
+{
+    "model": "hostel.hostel_detail",
+    "pk": 8,
+    "fields": {
+        "username": "sanujit112",
+        "password": "789tuchale",
+        "phone": "+917750841",
+        "hstl_name": "Sanujit Hostel",
+        "street": "2nd Lane kalpana Square, near bus stop",
+        "latitude": "20.2957839",
+        "longitude": "85.8311859",
+        "city": "Bhubaneswar",
+        "hstl_type": "Boys Hostel",
+        "zip": "751031",
+        "rooms": 34,
+        "beds": 200,
+        "ppw": 500,
+        "ppm": 3000,
+        "rooms_avail": 50,
+        "aadhar": "787656543456",
+        "id_proof": "media/idproof/20220601132632Screenshot_2022-03-03-16-48-35-29.jpg",
+        "image": "media/20220601132632mama.JPG"
+    }
+},
+{
+    "model": "hostel.hostel_detail",
+    "pk": 9,
+    "fields": {
+        "username": "pankaj11",
+        "password": "789tuchale",
+        "phone": "8897876467",
+        "hstl_name": "Pankaj Hostel",
+        "street": "Ram Mandir Lane,,",
+        "latitude": "0.0",
+        "longitude": "0.0",
+        "city": "Bhubaneswar",
+        "hstl_type": "Boys Hostel",
+        "zip": "763002",
+        "rooms": 34,
+        "beds": 100,
+        "ppw": 500,
+        "ppm": 1600,
+        "rooms_avail": 10,
+        "aadhar": "23453452545",
+        "id_proof": "media/idproof/20220601123320WhatsApp_Image_2022-03-16_at_7.45.26_PM_1.jpeg",
+        "image": "media/20220601123320taiga-ishii-mukO8Po_LZ8-unsplash.jpg"
+    }
+}
+]

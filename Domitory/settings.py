@@ -85,13 +85,14 @@ WSGI_APPLICATION = 'Domitory.wsgi.application'
 
 
 DATABASES = {
+    
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hostel',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'CONN_MAX_AGE': 9
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'domitory', 
+        'USER': 'postgres', 
+        'PASSWORD': 'DevRaj.12',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
     }
 }
 
