@@ -40,13 +40,13 @@ def index(request):
    
 
 def about(request):
-    send_mail(
+    """send_mail(
         'Hello',
         "comment tu vas?", 
         "domitory.8055@gmail.com",
         ['devrajdora445@gmail.com'],
         fail_silently=False,
-        )
+        )"""
     return render(request, 'about.html')
 
 
